@@ -25,7 +25,7 @@ prod(小程序文件目录)
             └─── .....
             
    └─components (自定义组件目录)
-        └─── component Folder... (如ben-ui中，定义了宝尊团队的小程序组件)
+        └─── component Folder........ (如ben-ui中，定义了宝尊团队的小程序组件)
         
    └─config (一些配置项设置)
         └─── api(定义接口配置，内详)
