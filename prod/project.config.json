@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.1",
 	"appid": "wx08e653df84c787c3",
-	"projectname": "demo-package",
+	"projectname": "demo-coach",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
