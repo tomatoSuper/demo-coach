@@ -1,3 +1,10 @@
 <view class="page-counting">第{{pageCounting}}个页面</view>
 <view class="bz-page-title">我是 BZ 的 plp 页面</view>
 <navigator class="nav-item" url="/BZ/pages/pdp/pdp">我要去 商品详情 页面</navigator>
+<view class="ben-data-list flex-row-con">
+  <view class="ben-data-item" wx:for="{{goods.list}}" wx:key="{{index}}">
+    <view class="ben-good-imgCon"></view>
+    <view class="ben-good-name">{{item.name}}</view>
+    <view class="ben-good-price">￥{{item.price}}</view>
+  </view>
+</view>

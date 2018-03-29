@@ -5,6 +5,7 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+    this.getSystemInfo();
     // 登录
     wx.login({
       success: res => {
@@ -31,6 +32,12 @@ App({
       }
     })
   },
+  getSystemInfo() {
+    let self = this;
+    wx.getSystemInfo({
+      success(res) { self.globalData.systemInfo = res; }
+    })
+  },
   globalData: {
     userInfo: null,
     navList: [
@@ -38,5 +45,19 @@ App({
       { title: 'Teein主页', path: '/Teein/pages/index/index?key=Teein999&value=客服管理' },
     ]
   },
+  BZ: {
+    globalData: {},
+    r_data: require('./utils/BZ/random_data.js'),
+    obj1: null,
+    obj2: null,
+    obj3: null,
+  },
+  Teein: {
+    globalData: {},
+    obj1: null,
+    obj2: null,
+    obj3: null,
+  },
+  api: require('./config/api/index.js'),
   util: require('./utils/util.js')
 })

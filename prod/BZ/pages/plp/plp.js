@@ -1,18 +1,22 @@
 // BZ/pages/plp/plp.js
+let app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    goods: { list: [] }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({ pageCounting: getCurrentPages().length });
+    let { r_data } = app.BZ;
+    let list = r_data.createCommodities(1, 20);
+    let setting = { ['goods.list']: list, pageCounting: getCurrentPages().length }
+    this.setData(setting);
   },
 
   /**

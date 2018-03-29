@@ -12,8 +12,15 @@
 <view class="nav-con flex-row-con">
   <navigator class="nav-item" wx:for="{{navList}}" wx:key="{{index}}" url='{{item.path}}'>{{item.title}}</navigator>
 </view>
-<view class="ben-collapse">
-  <view class="ben-collapse-title">折叠板标题</view>
-  <view class="ben-collapse-content">折叠板内容</view>
+<view class="ben-collapse {{collapse? 'in' : ''}}">
+  <view class="ben-collapse-label" bind:tap="onCollapse">折叠板标题</view>
+  <view class="ben-collapse-con">
+    <view class="ben-collapse-content">
+      <view>折叠板内容11</view>
+      <view>折叠板内容22</view>
+      <view>折叠板内容33</view>
+      <view>折叠板内容44</view>
+    </view>
+  </view>
 </view>
 <ben-modal open toast duration="3">Welcome</ben-modal>

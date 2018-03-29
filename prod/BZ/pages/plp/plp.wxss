@@ -1,1 +1,16 @@
 /* BZ/pages/plp/plp.wxss */
+.ben-data-list {
+  flex-wrap: wrap;
+  padding: 0 30rpx;
+}
+.ben-data-item {
+  width: 45%;
+  text-align: center;
+  margin: 10rpx 0;
+}
+.ben-good-imgCon {
+  height: 320rpx;
+  background-color: slategray;
+}
+.ben-good-name { font-size: 32rpx; }
+.ben-good-price { font-size: 28rpx; }

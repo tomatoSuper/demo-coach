@@ -1,22 +1,60 @@
 .ben-collapse {
-  padding: 0 30rpx;
+   padding: 0 30rpx; 
 }
-.ben-collapse-title {
+.ben-collapse-label {
+  box-sizing: border-box;
+  height: 65rpx;
   line-height: 64rpx;
   font-size: 28rpx;
   position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid #c0c0c0;
+  transition: border-color 0.3s;
 }
-.ben-collapse-title::before {
-  position: absolute;
-  content: '';
-  width: 2px;
-  height: 48rpx;
-  background-color: #eee;
-  top: 50%;  
-  right: 50%;
-  transform: translate(-50%, -50%)；
+.ben-collapse .ben-collapse-con {
+  height: auto;
+  overflow: visible;
+  transition: height 1s;
 }
 .ben-collapse-content {
+  line-height: 40rpx;
+  padding: 10rpx 0;
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: transform 0.4s, opacity 0.6s;
+}
+.ben-collapse.in .ben-collapse-content {
+  transform: translate(0, -50%);
+  opacity: 0;
+}
+.ben-collapse-label::before, .ben-collapse-label::after {
+  position: absolute;
+  content: '';
+  top:50%;
+  transition: transform 0.6s, background-color 0.6s;
+}
+.ben-collapse-label::before {
+  background-color: transparent;
+  right: 49rpx;
+  width: 2px;
+  height: 40rpx;
+  transform: translate(0, -50%) rotate(-90deg);
+}
+.ben-collapse-label::after {
+  background-color: #c0c0c0;
+  width: 40rpx;
+  height: 2px;
+  right: 30rpx;
+}
+
+.ben-collapse.in .ben-collapse-con{
   height: 0;
   overflow: hidden;
+}
+.ben-collapse.in .ben-collapse-label {
+  border-color: transparent;
+}
+.ben-collapse.in .ben-collapse-label::before {
+  background-color: #c0c0c0;
+  transform: translate(0, -50%);
 }
