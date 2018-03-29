@@ -1,0 +1,22 @@
+.ben-collapse {
+  padding: 0 30rpx;
+}
+.ben-collapse-title {
+  line-height: 64rpx;
+  font-size: 28rpx;
+  position: relative;
+}
+.ben-collapse-title::before {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 48rpx;
+  background-color: #eee;
+  top: 50%;  
+  right: 50%;
+  transform: translate(-50%, -50%)；
+}
+.ben-collapse-content {
+  height: 0;
+  overflow: hidden;
+}

@@ -50,6 +50,10 @@ prod(小程序文件目录)
             └─── page1
             └─── page2
             └─── .....
+   └─template (template模板容器)
+        └─── BZ ( 宝尊团队的模板库 )
+        └─── Teein ( Teein团队的模板库 )
+        └─── common ( 公共的模板库 )
             
    └─utils (公共的js方法库)
         └─── BZ ( 宝尊团队与业务功能相关的方法库 )
