@@ -9,6 +9,8 @@ var app = getApp();
 Page({
   //数据
   data: {
+    wechatId: '',
+    unionId: '',
     chatDataList: "",//聊天数据
     audioVoiceHidden: false,//语音-语音图片
     audioKeyBoardHidden: true,//语音-键盘图片
@@ -44,5 +46,10 @@ Page({
     that.getChatHeight();
   },
   onLoad: function (options) {
+    var that = this;
+    that.setData({
+      wechatId: app.globalData.wechatId,
+      unionId: app.globalData.unionId
+    })
   },
 });

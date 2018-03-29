@@ -10,7 +10,7 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
-    })
+    });
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -33,6 +33,10 @@ App({
   },
   globalData: {
     userInfo: null,
+    //公众号的id
+    wechatId: '公众号id',
+    //小程序unionid
+    unionId:'小程序unionid',
     navList: [
       { title: 'BZ主页', path: '/BZ/pages/index/index?id=BZ888&name=Nike运动鞋' },
       { title: 'Teein主页', path: '/Teein/pages/index/index?key=Teein999&value=客服管理' },
