@@ -1,6 +1,20 @@
 # demo-wxapp
 #### 关于项目结构
 ```
+   git clone https://github.com/tomatoSuper/demo-coach.git      // clone 代码
+   cd demo-coach/       // 进入项目文件夹
+   
+   git status       //  查看文件状态，没有什么提示。
+         do somethings....(添加文件，或者随便改一个文件)
+   git status       // 查看文件状态，红字显示文件的变化提示
+   git add .            // 
+   git status           // 绿字显示提示。文件添加进暂存区
+   git commit -m "自定义注释"            // 文件提交进本地仓库
+   git pull             // push代码之前先pull下线上仓库的代码，如果有merge冲突，在本地解决merge
+                        如果有merge 在处理完merge后，重新走 add  commit 脚本命令
+   git push             // 将本地仓库区代码推到线上仓库
+```
+```
 本项目使用分包加载的方案开发，项目结构规划如下
 prod(小程序文件目录)
 
@@ -11,7 +25,7 @@ prod(小程序文件目录)
             └─── .....
             
    └─components (自定义组件目录)
-        └─── component Folder... (如ben-ui中，定义了宝尊团队的小程序组件)
+        └─── component Folder........ (如ben-ui中，定义了宝尊团队的小程序组件)
         
    └─config (一些配置项设置)
         └─── api(定义接口配置，内详)
