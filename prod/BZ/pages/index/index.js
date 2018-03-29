@@ -1,18 +1,23 @@
 // BZ/pages/index/index.js
+let app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    query: null
+    query: null,
+    TeeinPath: '/Teein/pages/index/index'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({ query: options, pageCounting: getCurrentPages().length });
+    let query = { id: 'BZ', wechatId: 'formBZ', unionId: 'BZ_unionId' }
+    let { TeeinPath } = this.data;
+    TeeinPath = TeeinPath + app.util.createQueryString(query);
+    this.setData({ TeeinPath, query: options, pageCounting: getCurrentPages().length });
   },
 
   /**

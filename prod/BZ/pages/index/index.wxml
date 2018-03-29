@@ -4,7 +4,7 @@
   <text>传递参数:</text>
   <view wx:for="{{query}}" wx:key="{{index}}">{{index}}: {{item}}</view>
 </view>
-<navigator class="nav-item" url="/Teein/pages/index/index?key=Teain999&value=客服管理">我要去Teein主页</navigator>
+<navigator class="nav-item" url="{{TeeinPath}}">我要去Teein主页</navigator>
 <navigator class="nav-item" url="/BZ/pages/plp/plp">我要去 商品列表 页面</navigator>
 <ben-modal open title="标题">
   <view class="text-center">Welcome to BZ_Store !!!</view>

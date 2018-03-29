@@ -46,7 +46,7 @@ App({
     unionId:'小程序unionid',
     navList: [
       { title: 'BZ主页', path: '/BZ/pages/index/index?id=BZ888&name=Nike运动鞋' },
-      { title: 'Teein主页', path: '/Teein/pages/index/index?key=Teein999&value=客服管理' },
+      { title: 'Teein主页', path: '/Teein/pages/index/index?id=BZ&wechatId=formBZ&unionId=BZ_unionId' },
     ]
   },
   BZ: {
