@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "ben-modal": "/components/ben-modal/ben-modal"
+  },
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#efefef",
+  "navigationBarBackgroundColor": "#000000",
+  "navigationBarTitleText": "BZ的主页",
+  "navigationBarTextStyle": "white"
+}

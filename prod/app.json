@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "subPackages": [
+    {
+      "root": "BZ",
+      "pages": [
+        "pages/index/index",
+        "pages/address/address",
+        "pages/checkout/checkout",
+        "pages/coupons/coupons",
+        "pages/filter/filter",
+        "pages/my-account/my-account",
+        "pages/order/order",
+        "pages/plp/plp",
+        "pages/pdp/pdp",
+        "pages/shop-car/shop-car",
+        "pages/activty/activty"
+      ]
+    },
+    {
+      "root": "Teein",
+      "pages": [
+        "pages/index/index"
+      ]
+    }
+  ]
+}

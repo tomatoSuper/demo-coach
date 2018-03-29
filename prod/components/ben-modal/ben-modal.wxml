@@ -1,0 +1,17 @@
+<view wx:if="{{toast}}" wx:key="{{Math.random()}}" class="ben-toast-con" style="{{animation}}">
+  <slot></slot>
+</view>
+<view wx:else wx:key="{{Math.random()}}" hidden="{{!open}}" class="ben-modal-mask" capture-catch:tap="_closeModal">
+  <view class="ben-modal-dialog flex-col-con" catch:touchstart="_touchDialog">
+    <view class="ben-modal-close" catch:touchstart="_closeModal"><slot name="ben-modal-close"></slot></view>
+    <view class="ben-modal-title">{{title}}<slot name="modal-title" >111</slot></view>
+    <view class="ben-modal-content"><slot></slot></view>
+    <view class="ben-btn-con flex-row-con" wx:if="{{btnText.length}}" wx:key="{{Math.random()}}">
+      <view wx:if="{{btnText.length > 1}}" wx:key="{{Math.random()}}" catch:touchstart="_onTapCancel" class="ben-btn ben-btn-cancel">{{btnText[1]}}</view>
+      <view class="ben-btn ben-btn-ensure" catch:touchstart="_onTapEnsure">{{btnText[0]}}</view>
+    </view>
+    <view wx:else wx:key="{{Math.random()}}">
+      <slot name="ben-modal-footer"></slot>
+    </view>
+  </view>
+</view> 

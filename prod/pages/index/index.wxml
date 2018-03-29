@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="userinfo">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  <block wx:else>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </block>
+</view>
+<view class="usermotto">
+  <view class="page-counting">第{{pageCounting}}个页面</view>
+</view>
+<view class="nav-con flex-row-con">
+  <navigator class="nav-item" wx:for="{{navList}}" wx:key="{{index}}" url='{{item.path}}'>{{item.title}}</navigator>
+</view>
+<ben-modal open toast duration="3">Welcome</ben-modal>

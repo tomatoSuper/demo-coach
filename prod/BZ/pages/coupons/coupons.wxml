@@ -1,0 +1,3 @@
+<view class="page-counting">第{{pageCounting}}个页面</view>
+<view class="bz-page-title">我是 BZ 的 优惠券 页面</view>
+<navigator class="nav-item" url="/BZ/pages/activty/activty">我要去 活动 页面</navigator>

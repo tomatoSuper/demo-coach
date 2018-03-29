@@ -1,0 +1,4 @@
+/* Teain/pages/index/index.wxss */
+.btn-primary {
+  margin: 10rpx 0;
+}

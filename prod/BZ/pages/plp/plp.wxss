@@ -1,0 +1,21 @@
+/* BZ/pages/plp/plp.wxss */
+.ben-data-list.flex-row-con {
+  flex-wrap: wrap;
+  padding: 1px 30rpx;
+}
+.ben-data-list .ben-data-con {
+  width: 45%;
+  text-align: center;
+  margin: 10rpx 0;
+}
+.ben-data-con .ben-commodity-image-con {
+  width: 100%;
+  background-color: skyblue;
+  height: 320rpx;
+}
+.ben-commodity-name {
+  font-size: 28rpx;
+}
+.ben-commodity-price {
+  font-size: 32rpx;
+}

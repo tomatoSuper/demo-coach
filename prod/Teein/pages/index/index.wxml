@@ -1,0 +1,14 @@
+<view class="page-counting">第{{pageCounting}}个页面</view>
+<view class="bz-page-title">我是 Teain 的 index 页面</view>
+<view class="flex-row-con">
+  <text>传递参数:</text><view wx:for="{{query}}" wx:key="{{index}}">{{index}}: {{item}}</view>
+</view>
+<navigator class="nav-item" url="/BZ/pages/index/index?id=BZ888&name=Nike运动鞋">我要去BZ主页</navigator>
+<view class="btn btn-primary" bind:tap="openModal">我要调用弹框插件</view>
+<view class="btn btn-primary" bind:tap="openToast">我要调用闪烁条插件</view>
+<ben-modal open="{{modal}}" title="提示标题">
+  <view class="text-center text-warning">弹框提示内容</view>
+</ben-modal>
+<ben-modal open="{{toast}}" toast>
+  我是闪烁层
+</ben-modal>

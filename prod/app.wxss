@@ -1,0 +1,23 @@
+/**app.wxss**/
+@import '/styles/common/common.wxss';
+.bz-page-title {
+  font-size: 44rpx;
+  text-align: center;
+}
+.page-counting {
+  text-align: center;
+}
+.nav-item {
+  margin: 10rpx 0;
+  text-align: center;
+  background-color: rebeccapurple;
+  color: #fff;
+  line-height: 64rpx;
+}
+
+.btn-primary {
+  background-color: royalblue;
+  line-height: 6vh;
+  text-align: center;
+  color: #fff;
+}
