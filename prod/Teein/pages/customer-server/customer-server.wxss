@@ -1,5 +1,3 @@
-/* Teein/pages/customer-server/customer-server.wxss */
-
 page{
   height: 100%;
 }
