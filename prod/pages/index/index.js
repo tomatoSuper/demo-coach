@@ -7,11 +7,13 @@ Page({
     formIds: [],
     userInfo: {},
     hasUserInfo: false,
+    collapse: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     navList: app.globalData.navList
   },
   //事件处理函数
   bindViewTap: function() { wx.navigateTo({url: '../logs/logs'}); },
+  onCollapse(e) { let { collapse } = this.data; this.setData({ collapse: !collapse }) },
   onLoad: function () {
     this.setData({ pageCounting: getCurrentPages().length });
     if (app.globalData.userInfo) {
