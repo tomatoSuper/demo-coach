@@ -6,9 +6,23 @@
 <!--index.wxml-->
 <view class="container">
     <view class="chat">
+
+    <view class='testTitle'>
+       teein测试页面
+    </view>
   <view>
-       <navigator url='/BZ/pages/index/index?id=TeeinParams&course=我是课程&openid=我是openid哦' class='btn-test'>跳转BZ-index(携带id,course,opendid)</navigator>
+       <navigator url='/BZ/pages/index/index?id=Teein&wechatId={{wechatId}}&unionId={{unionId}}' class='btn-test'>跳转BZ-index(携带id,wechatId,unionId)(点击跳转)</navigator>
   </view>
+
+  <view class='btn-test'>
+      显示公众号ID：{{wechatId}}
+  </view>
+
+    <view class='btn-test'>
+       显示小程序：{{unionId}}
+  </view>
+
+
       <!--输入框-->
       <view class="chat-body">
         <view class="chat-input">
