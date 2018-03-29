@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "ben-modal": "/components/ben-ui/ben-modal/ben-modal"
+    "ben-modal": "/components/ben-modal/ben-modal"
   },
   "backgroundTextStyle": "dark",
   "backgroundColor": "#efefef",

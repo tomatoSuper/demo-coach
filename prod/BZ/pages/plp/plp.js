@@ -1,20 +1,18 @@
-let app = getApp();
+// BZ/pages/plp/plp.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let { r_data } = app.BZ
-    let commodities = r_data.createCommodities(1, 20);
-    this.setData({ commodities, pageCounting: getCurrentPages().length });
+    this.setData({ pageCounting: getCurrentPages().length });
   },
 
   /**

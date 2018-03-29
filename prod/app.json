@@ -29,7 +29,8 @@
     {
       "root": "Teein",
       "pages": [
-        "pages/index/index"
+        "pages/index/index",
+        "pages/customer-server/customer-server"
       ]
     }
   ]

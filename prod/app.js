@@ -32,7 +32,6 @@ App({
       }
     })
   },
-  // globalData 定义全局对象
   globalData: {
     userInfo: null,
     navList: [
@@ -40,13 +39,5 @@ App({
       { title: 'Teein主页', path: '/Teein/pages/index/index?key=Teein999&value=客服管理' },
     ]
   },
-  util: require('./utils/util.js'), // 定义引用工具方法库
-  api: require('/config/api/index.js'), // 定义引用服务器接口配置
-  // 宝尊团队使用的相关方法库
-  BZ: {
-    r_data: require('./utils/BZ/random_data.js') // 示例：定义和引用 创建随机数据方法库
-  },
-  // Teein团队使用的相关方法库
-  Teein: {},
-  // 可以继续扩展任意其他 全局对象 和 方法库
+  util: require('./utils/util.js')
 })

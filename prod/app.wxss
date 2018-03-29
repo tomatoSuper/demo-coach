@@ -1,5 +1,5 @@
 /**app.wxss**/
-@import '/styles/common/common.wxss';
+@import '/styles/public.wxss';
 .bz-page-title {
   font-size: 44rpx;
   text-align: center;

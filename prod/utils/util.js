@@ -1,4 +1,65 @@
+function MyCharts(setting) {
+  let self = this;
+  let { id, value, range, line, size, padding, radius, ready } = setting;
+  let ctx = wx.createCanvasContext(id);
+  ctx.clearRect(0, 0, size.width, size.height);
+  let center = [size.width / 2, size.height / 2];
+  padding = !padding || padding < 1 ? 1 : padding;
+  radius = radius || (center[0] > center[1] ? center[1] : center[0]) - padding;
+  let numScale = value < range[1] ? value / (range[1] - range[0]) : 1;
+  let arcRange = [5 / 6 * Math.PI, 1 / 6 * Math.PI];
+  let arcScale = 4 / 3 * Math.PI;
+
+  // 先画外面圆的底色
+  ctx.beginPath();
+  ctx.arc(center[0], center[1], radius, arcRange[0], arcRange[1]);
+  ctx.setStrokeStyle('#c0c0c0');
+  ctx.setLineCap('round');
+  ctx.setLineWidth(1);
+  ctx.stroke();
+
+  // 画进度线的底色
+  ctx.beginPath()
+  radius = radius - (line.margin || 4);
+  ctx.arc(center[0], center[1], radius, arcRange[0], arcRange[1]);
+  ctx.setStrokeStyle(line.background || '#c0c0c0');
+  ctx.setLineCap('round');
+  ctx.setLineWidth(line.width || 1);
+  ctx.stroke();
+
+  ctx.draw();
+
+  this.animation = null;
+  this.ready = false;
+  this.proAng = this.startAng = arcRange[0];
+  this.stepAng = 0.005 * arcScale;
+  // 画进度值的线
+  let lineEnd = arcRange[0] + numScale * arcScale;
+  self.animation = setInterval(_ => {
+    ctxAnimate(ctx, self.startAng, self.proAng)
+  }, 10)
+  function ctxAnimate(ctx, start, end) {
+    ctx.beginPath();
+    ctx.setLineWidth(1)
+    ctx.setLineJoin('miter')
+    ctx.arc(center[0], center[1], radius, start, end);
+    ctx.setStrokeStyle(line.color || '#BC1928')
+    ctx.stroke()
+    if (self.proAng >= lineEnd) {
+      self.ready = true;
+      clearInterval(self.animation);
+      ctx.draw(true, _ => {
+        !!self.ready && !!ready && typeof ready === 'function' && ready(ctx);
+      });
+    } else { ctx.draw(true); self.proAng += self.stepAng; }
+  }
+
+}
+
 module.exports = {
+  chart(setting) {
+    return new MyCharts(setting);
+  },
   formatTime(date, param, lang) {
     lang = lang || '-'
     const year = date.getFullYear()

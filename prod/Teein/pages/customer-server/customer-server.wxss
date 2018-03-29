@@ -1,0 +1,410 @@
+/* Teein/pages/customer-server/customer-server.wxss */
+
+page{
+  height: 100%;
+}
+.btn-test {
+  width: 100%;
+  height: 50px;
+  background: blue;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.container{
+  height: 100%;
+  box-sizing: border-box;
+  color:#040a2b;
+}
+.chat{
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+}
+image {height:auto;}
+/*聊天记录*/
+.chat-head{
+  width:100%;
+  display: flex;
+  flex-grow:inherit;
+ /* overflow-y: scroll; 
+  -webkit-overflow-scrolling: touch;  */
+  background:#f2f2f2;
+  overflow:hidden;
+
+
+}
+.chat-head .chat-head-scroll{
+  width:100%;
+  padding:0rpx 0;
+  -webkit-overflow-scrolling: touch;
+   /* overflow-y: scroll;  */
+}
+/*聊天内容*/
+.chat-head .chat-content{
+  width:100%;
+}
+.chat-head .chat-content .chat-list{
+  width:100%;
+}
+.chat-head .chat-content .list-grid{
+  width:100%;
+  padding:2% 3%;
+  box-sizing: border-box;
+}
+.chat-head .chat-content .list-grid .list-box{
+  display: flex;
+  align-items: flex-start;
+}
+.chat-head .chat-content .list-grid.left-grid .list-box{
+  flex-direction: row;
+}
+.chat-head .chat-content .list-grid.right-grid .list-box{
+  flex-direction: row-reverse;
+}
+.chat-head .chat-content .list-head{
+  display: flex;
+}
+.chat-head .chat-content .list-head.right-head{
+  justify-content: flex-end;
+}
+.chat-head .chat-content .list-body{
+  display: flex;
+  box-sizing: border-box;
+  max-width: 60%;
+  word-wrap: break-word;
+  text-align: justify;
+}
+.chat-head .chat-content .list-body.list-text,
+.chat-head .chat-content .list-body.list-voice{
+  padding:16rpx 20rpx 20rpx;
+}
+.chat-head .chat-content .list-body.list-voice{
+  padding:0;
+}
+.chat-head .chat-content .list-body.right-body{
+  justify-content: flex-end;
+}
+.list-word{
+  font-size: 32rpx;
+}
+.chat-head .chat-content .list-head-img{
+  width:50px;
+  height:50px;
+  overflow:hidden;
+  /* height:96rpx; */
+  border-radius: 100%;
+}
+.chat-head .chat-content .list-body.list-text.left-text,
+.chat-head .chat-content .list-body.left-voice{
+  background: #E6E6E6;
+  margin-left: 2.5%;
+  border-top-right-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+  border-bottom-left-radius: 40rpx;
+  position:relative;
+}
+.chat-head .chat-content .list-body.list-text.right-body,
+.chat-head .chat-content .list-body.right-voice{
+  color: #FFFFFF;
+  background: rgb(2,37,103);
+  margin-right: 2.5%;
+  border-top-left-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+  border-bottom-left-radius: 40rpx;
+  position:relative;
+}
+.chat-head .chat-content .list-body.right-voice text{
+position:absolute;
+left:-30rpx;
+top:17px;
+font-size:22rpx;
+color:#bfbfbf;
+width:35rpx;
+
+}
+.chat-head .chat-content .list-body.left-voice text{
+position:absolute;
+right:-46rpx;
+top:17px;
+font-size:22rpx;
+color:#bfbfbf;
+width:35rpx;
+
+}
+.chat-head .chat-content .list-body.right-voice>view{
+content: "";
+position:absolute;
+left:19rpx;
+top:50%;
+transform: translate(0,-50%);
+-webkit-transform: translate(0,-50%);
+width:10rpx;
+height:10rpx;
+display:block;
+background:#fff;
+border-radius:100%;
+z-index:10;
+}
+
+.chat-head .chat-content .list-body.left-voice>view{
+content: "";
+position:absolute;
+right:19rpx;
+top:50%;
+transform: translate(0,-50%);
+-webkit-transform: translate(0,-50%);
+width:10rpx;
+height:10rpx;
+display:block;
+background:green;
+border-radius:100%;
+z-index:10;
+}
+.chat-head .chat-content .list-body text{
+  width:100%;
+}
+.chat-head .chat-content .list-image.left-image{
+  max-width: 30%;
+  /* max-height: 300rpx; */
+  margin-left: 2.5%;
+  /* overflow: hidden; */
+}
+.chat-head .chat-content .list-image.right-image{
+  max-width: 30%;
+  /* max-height: 300rpx; */
+  margin-right: 2.5%;
+  /* overflow: hidden; */
+}
+.emojIco{width:24px;}
+.list-text image{vertical-align:middle;}
+/*聊天内容*/
+
+/*时间戳*/
+.chat-head .chat-time{
+display:block;
+text-align: center;
+color:#bfbfbf;
+font-size:20rpx;
+}
+/*时间戳*/
+
+
+
+
+/*聊天记录*/
+
+/*输入框*/
+.chat-body{
+  display: block;
+  box-sizing: border-box;
+  width:100%;
+  height:44px;
+  border:1px solid #B6B7BA;
+  border-left:0;
+  border-right:0;
+  flex-grow:inherit;
+}
+.chat-body .chat-input{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding-right:0.5%;
+}
+.chat-input .input-audio{
+  display: block;
+  width: 11.5%;
+  height: 100%;
+}
+.chat-input .input-text{
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat-input .input-text .text-textarea{
+  box-sizing: border-box;
+  height:70rpx;
+  width:98%;
+}
+
+.chat-input .input-text .text-textarea textarea{
+  width:100%;
+  min-height:70rpx;
+  line-height:70rpx;
+  height:44rpx;
+  font-size: 32rpx;
+  overflow-y: scroll;
+  background-color:#fff; 
+  border:1px solid #B6B7BA;
+  border-radius: 5px;
+  padding-left:0px 4px;
+ display:block;
+
+  box-shadow: 1px 1px 1px 1px #B6B7BA inset;
+}
+.chat-input .input-text .text-textarea input{
+  width:100%;
+  height:70rpx;
+  font-size: 32rpx;
+  /* background-color:#fff;  */
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px #B6B7BA inset;
+  padding-left:4px;
+  line-height:70rpx;
+}
+.chat-input .input-text .text-voice view{
+  width:100%;
+  height: 70rpx;
+  font-size:32rpx;
+  /* border:1px solid #B6B7BA; */
+  box-shadow:1px 1px 1px 1px #B6B7BA;
+  border-radius: 5px;
+}
+.chat-input .input-emoj{
+  display: block;
+  width: 11.5%;
+  height: 100%;
+}
+.chat-input .input-send{
+  display: block;
+  width: 11.5%;
+  height: 100%;
+
+}
+.chat-input .input-send .send-text{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.chat-input .input-send .send-text view{
+  font-size:32rpx;
+  border:1px solid #B6B7BA;
+  height: 65%;
+  width:100%;
+  border-radius: 5px;
+}
+.chat-input view view{
+  width:100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chat-input view view image{
+  width: 65%;
+  height: 65%;
+}
+/*输入框*/
+
+/*素材*/
+.chat-foot{
+  display: block;
+  width:100%;
+  
+}
+.chat-foot .foot-source{
+  width:100%;
+  height:232rpx;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top:6px;
+}
+.chat-foot .foot-source .source-emoj{
+  width:100%;
+  height: 100%;
+}
+.chat-foot .foot-source .source-emoj swiper{
+  width:100%;
+  height: 244rpx;
+}
+.chat-foot .foot-source .source-emoj swiper-item{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  width:100%;
+  height: 239rpx;
+}
+.chat-foot .foot-source .source-emoj .slide-box{
+  width:107rpx;
+  height:43rpx;
+  flex-grow:0;
+  flex-shrink: 0;
+  flex-basis: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0;
+  padding:0;
+}
+.chat-foot .foot-source .source-emoj .slide-image{
+  width:48rpx;
+  height:48rpx;
+}
+.chat-foot .foot-source .source-material{
+  display:flex;
+  width:100%;
+  height:100%;
+  flex-direction:row;
+  justify-content:flex-start;
+}
+.chat-foot .foot-source .source-material .material-box{
+  display: block;
+  width:12%;
+  height:100%;
+  padding:6% 0;
+  margin:0 10px;
+  box-sizing: border-box;
+}
+.chat-foot .foot-source .source-material .material-img-box{
+  display:flex;
+  width:100%;
+  height: 55%;
+  align-items: center;
+  justify-content: center;
+}
+.chat-foot .foot-source .source-material .material-text-box{
+  display:flex;
+  width:100%;
+  height: 45%;
+  align-items: center;
+  justify-content: center;
+}
+.chat-foot .foot-source .source-material .material-img-box image{
+  width:90%;
+  height:90%;
+  display:block;
+}
+.chat-foot .foot-source .source-material .material-text-box{
+  font-size:24rpx;
+}
+/*素材*/
+
+/*聊天放大的图片*/
+/*聊天放大的图片*/
+.showBigPic{position:absolute;width:100%;height:100%;z-index:10;left:0;top:0;background:#000;}
+.showBigPic image{position:absolute;width:100%;left:0;top:50%;transform: translate(0,-50%);-webkit-transform: translate(0,-50%);}
+/*聊天放大的图片*/
+
+/*预约*/
+.chat-head .chat-content .list-body.list-text.left-text.leftReservation{display:flex;flex-direction: column;max-width: 85%;padding:30rpx 45rpx 0;background:#fff;}
+.reservationTitle2{color:#b8b8b8;font-size:26rpx;margin:10rpx auto;}
+.leftReservation view{color:#b8b8b8;font-size:22rpx;}
+.leftReservation view text{color:#040a2b;margin-right:15rpx;font-size:22rpx;}
+.leftReservation view.appointmentExp{border-top:1px solid #f2f2f2;color:#c6a263;line-height:65rpx;margin:35rpx auto 0;width:100%;text-align: left;letter-spacing: 1px;}
+/*预约*/
+#red{height:40px;background:red;}
+/*会话加载时遮挡提示页*/
+.shadowLayer{width:100%;height:100%;background:rgba(0,0,0,.8);position:fixed;left:0;top:0;z-index:9999;}
+.shadowLayer image{width:70%;position:absolute;left:15%;top:50%;transform: translate(0,-50%);-webkit-transform:translate(0,-50%); }
+/*语音提示*/
+.audioGif{width:8%;padding:8%;position:fixed;left:38%;top:50%;transform: translate(0,-50%);-webkit-transform:translate(0,-50%);z-index:9999;background:rgba(0,0,0,.5);border-radius:4px;}
+.audioGif image{width:100%;height:auto;}
+.audioGif view{font-size:24rpx;color:#fff;text-align: center;display: block;position:absolute;bottom:20rpx;left:0;width:100%;}
