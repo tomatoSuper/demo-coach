@@ -4,7 +4,6 @@
 <!--遮挡层结束-->
 
 <!--index.wxml-->
-<view class="container">
     <view class="chat">
 
     <view class='testTitle'>
@@ -22,88 +21,4 @@
        显示小程序的unionId：{{unionId}}
   </view>
 
-
-      <!--输入框-->
-      <view class="chat-body">
-        <view class="chat-input">
-          <view class="input-audio">
-            <block wx:if="{{audioVoiceHidden === false}}">
-              <view class="audio-voice" bindtap="audioVoice">
-                <image src="{{images.chatinputaudio}}" mode="widthFix"></image>
-              </view>
-            </block>
-            <block wx:if="{{audioKeyBoardHidden === false}}">
-              <view class="audio-keyBoard" bindtap="audioKeyBoard">
-                <image src="{{images.chatinputkeyboard}}" mode="widthFix"></image>
-              </view>
-            </block>
-          </view>
-          <view class="input-text">
-            <block wx:if="{{textareaHidden === false}}">
-              <view class="text-textarea">
-              <form bindsubmit="textSend" bindreset="formReset" style="width:100%">
-                 <input type="text" id="chatInput" confirm-type="send" bindconfirm='textSend' bindinput="listenInput" value="{{inputVal}}" data-value="{{inputVal}}" focus="{{inputFocus}}" bindfocus='bindInputFocus'/> 
-              </form>
-              </view>
-            </block>
-            <block wx:if="{{textVoiceHidden === false}}">
-              <view class="text-voice" bind:touchstart='startRecordVoice' bind:touchend='stopRecordVoice'>
-                <view>按住 说话</view>
-              </view>
-            </block>
-          </view>
-          <view class="input-emoj">
-            <block wx:if="{{emojExpressionHidden === false}}">
-              <view class="emoj-expression" bindtap="emojExpression">
-                <image src="{{images.chatinputemoj}}" mode="widthFix"></image>
-              </view>
-            </block>
-            <block wx:if="{{emojKeyBoardHidden == false}}">
-              <view class="emoj-keyBoard" bindtap="emojKeyBoard">
-                <image src="{{images.chatinputkeyboard}}" mode="widthFix"></image>
-              </view>
-            </block>
-          </view>
-          <view class="input-send">
-            <block wx:if="{{sendFileHidden == false}}">
-              <view class="send-file" bindtap="sendFile">
-                <image src="{{images.chatinputplus}}" mode="widthFix"></image>
-              </view>
-            </block>
-            <block wx:if="{{sendTextHidden == false}}" >
-              <view class="send-text" bindtap="textSend">
-                <view >发送</view>  
-              </view>
-            </block>
-          </view>
-        </view>    
-      </view>
-      
-      <!--素材和表情-->
-      <view class="chat-foot">
-        <block wx:if="{{footSourceHidden === false}}">
-          <view class="foot-source">
-            <block wx:if="{{emojHidden === false}}">
-              <view class="source-emoj">
-                <swiper class="swiper" indicator-dots="true">
-                  <template is="emoj-template" data="{{emojImgObj}}" />
-                  <view style="height:57px;width:100%;display:inline-block"></view>
-                </swiper>
-              </view>
-            </block>
-            <block wx:if="{{materialHidden === false}}">
-              <view class="source-material">
-                <view class="material-file material-box" bindtap='updateImg'>
-                  <view class="file-img material-img-box">
-                    <image src="{{images.chatsourcefile}}" mode="widthFix"></image> 
-                  </view>
-                  <view class="file-text material-text-box">图片</view>
-                </view>
-              </view>
-            </block> 
-          </view>
-        </block>
-      </view>
-
-    </view>
 </view>
