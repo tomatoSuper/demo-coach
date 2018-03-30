@@ -40,10 +40,10 @@ App({
   },
   globalData: {
     userInfo: null,
-    //公众号的id
-    wechatId: '公众号id',
+    //公众号的openid
+    wechatId: '',
     //小程序unionid
-    unionId:'小程序unionid',
+    unionId:'',
     navList: [
       { title: 'BZ主页', path: '/BZ/pages/index/index?id=BZ888&name=Nike运动鞋' },
       { title: 'Teein主页', path: '/Teein/pages/index/index?id=BZ&wechatId=formBZ&unionId=BZ_unionId' },

@@ -15,11 +15,11 @@
   </view>
 
   <view class='btn-test'>
-      显示公众号ID：{{wechatId}}
+      显示公众号openid：{{wechatId}}
   </view>
 
     <view class='btn-test'>
-       显示小程序：{{unionId}}
+       显示小程序的unionId：{{unionId}}
   </view>
 
 
