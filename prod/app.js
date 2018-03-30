@@ -26,7 +26,7 @@ App({
               this.globalData.userInfo = res.userInfo
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
-              let setting = { id: 'userId', unionId: 'myUnionId', wechatId: 'myWechartId', openId: 'myOpenId'}
+              let setting = { id: 'userId', unionId: 'myUnionId', openId: 'myOpenId'}
               Object.assign(this.globalData, setting);
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
@@ -46,7 +46,7 @@ App({
   globalData: {
     userInfo: null,
     //公众号的openid
-    wechatId: '',
+    openId: '',
     //小程序unionid
     unionId:''
   },

@@ -28,7 +28,6 @@ Page({
 
   },
   openCustomerServer:function(option) {
-    console.log(option);
     var that = this;
     wx.navigateTo({
       url: 'pages/customer-server',

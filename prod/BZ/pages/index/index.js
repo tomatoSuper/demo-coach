@@ -14,7 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let query = { id: 'BZ', wechatId: 'formBZ', unionId: 'BZ_unionId' }
+    let query = { id: 'BZ', openId: 'formBZ', unionId: 'BZ_unionId' }
     let { TeeinPath } = this.data;
     TeeinPath = TeeinPath + app.util.createQueryString(query);
     this.setData({ TeeinPath, query: options, pageCounting: getCurrentPages().length });

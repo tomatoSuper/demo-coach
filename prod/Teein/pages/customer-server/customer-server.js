@@ -9,7 +9,7 @@ var app = getApp();
 Page({
   //数据
   data: {
-    wechatId: '',
+    openId: '',
     unionId: '',
     chatDataList: "",//聊天数据
     audioVoiceHidden: false,//语音-语音图片
@@ -48,8 +48,9 @@ Page({
   onLoad: function (options) {
     var that = this;
     that.setData({
-      wechatId: app.globalData.wechatId,
+      openId: app.globalData.openId,
       unionId: app.globalData.unionId
-    })
+    });
+    console.log(this.data.openid);
   },
 });
