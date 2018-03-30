@@ -2,6 +2,7 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
+    let self = this;
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
@@ -18,11 +19,15 @@ App({
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
+            withCredentials: true,
             success: res => {
+              console.log(res);
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
+              let setting = { id: 'userId', unionId: 'myUnionId', wechatId: 'myWechartId', openId: 'myOpenId'}
+              Object.assign(this.globalData, setting);
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
               }
@@ -43,11 +48,7 @@ App({
     //公众号的openid
     wechatId: '',
     //小程序unionid
-    unionId:'',
-    navList: [
-      { title: 'BZ主页', path: '/BZ/pages/index/index?id=BZ888&name=Nike运动鞋' },
-      { title: 'Teein主页', path: '/Teein/pages/index/index?id=BZ&wechatId=formBZ&unionId=BZ_unionId' },
-    ]
+    unionId:''
   },
   BZ: {
     globalData: {},
