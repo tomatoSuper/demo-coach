@@ -1,6 +1,14 @@
 /**app.wxss**/
 @import '/styles/common/common.wxss';
+@import '/styles/my-loading.wxss';
 @import '/styles/BZ/ben-collapse.wxss';
+@import '/styles/BZ/ben-form.wxss';
+page {
+  background-color: #f0f0f0;
+}
+scroll-view.data-list {
+  height: 100vh;
+}
 .bz-page-title {
   font-size: 44rpx;
   text-align: center;
@@ -14,6 +22,7 @@
   background-color: rebeccapurple;
   color: #fff;
   line-height: 64rpx;
+  font-size: 28rpx;
 }
 
 .btn-primary {

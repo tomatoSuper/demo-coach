@@ -1,7 +1,14 @@
 {
   "pages": [
+    "pages/canvas/canvas",
+    "pages/form/upload/upload",
+    "pages/form/validate/validate",
+    "pages/form/calendar/calendar",
+    "pages/list/router/router",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/list/page-list/page-list",
+    "pages/list/scroll-list/scroll-list",
+    "pages/form/router/router"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -33,5 +40,20 @@
         "pages/customer-server/customer-server"
       ]
     }
-  ]
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/list/router/router",
+        "text": "列表"
+      },
+      {
+        "pagePath": "pages/form/router/router",
+        "text": "表单"
+      }
+    ],
+    "borderStyle": "white",
+    "backgroundColor": "#fff"
+  },
+  "workers": "workers"
 }

@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#efefef",
+  "navigationBarBackgroundColor": "#000",
+  "navigationBarTitleText": "page-list",
+  "navigationBarTextStyle": "white",
+  "onReachBottomDistance": 120,
+  "enablePullDownRefresh": true
+}

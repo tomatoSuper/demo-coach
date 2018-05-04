@@ -1,0 +1,59 @@
+<template name="ben-input-group">
+  <view class="ben-form-group {{name}} flex-row-con">
+    <input name="{{name}}" value="{{value}}" placeholder="{{placeholder}}" maxlength="{{maxlength || -1}}" 
+    data-valid="{{valid}}" data-name="{{name}}" data-rule="{{rule}}" 
+    bindfocus="_focusHandler" bindinput="_inputHandler" bindblur="_blurHandler">
+    </input>
+    <block wx:if="{{subBtn}}">
+      <button class="ben-sub-btn" wx:if="{{subBtn.type==='open-type'}}" open-type="{{subBtn.method}}" bind:getphonenumber="{{subBtn.onTap}}">
+        {{subBtn.text}}
+      </button>
+      <view class="ben-sub-btn" capture-catch:tap="{{subBtn.onTap}}" wx:else>{{subBtn.text}}</view>
+    </block>
+  </view>
+  <view class="error-message">{{error}}</view>
+</template>
+
+<template name="ben-chosen-group">
+  <input hidden name="{{name}}" value="{{value}}"></input>
+  <view class="{{name}} ben-form-group chosen flex-row-con">
+    <view wx:if="{{type === 'radio'}}" class="chosen-item {{data.index === index ? 'checked' : ''}}"
+          wx:for="{{list}}" wx:key="{{index}}" bindtap="_onChosenItem"data-name="{{name}}" data-index="{{index}}">
+          {{item[keyMap.text]}}
+    </view> 
+    <view wx:if="{{type === 'checkbox'}}" class="chosen-item {{ item.checked ? 'checked' : ''}}" wx:for="{{list}}" wx:key="{{index}}" 
+          bindtap="_onChosenItem"data-name="{{name}}" data-index="{{index}}">
+          {{item[keyMap.text]}}
+    </view> 
+  </view>
+  <view wx:if="{{required}}" hidden="{{!error}}" class="error-message">必选</view>
+</template>
+
+<template name="ben-picker-group">
+  <input hidden name="{{name}}" value="{{list[data.index][keyMap.value]}}"></input>
+  <picker value="{{data.index}}" range-key="{{keyMap.text}}"  range="{{list}}" data-name="{{name}}" bind:change="_onPickerChange">
+    <view class="ben-picker">{{list[data.index][keyMap.text]}}</view>
+  </picker>
+  <view wx:if="{{required}}" hidden="{{!error}}" class="error-message">必选</view>
+</template>
+
+<template name="ben-mutiPicker-group">
+  <input hidden name="{{name}}" value=""></input>
+  <picker value="{{data.index}}" range-key="{{keyMap.text}}" range="{{list}}" mode="multiSelector"
+    data-name="{{name}}" bind:change="_onMutiPickerChange" bindcolumnchange="_onMutiPickerColumnChange">
+    <view class="ben-picker">请选择</view>
+  </picker>
+  <view wx:if="{{required}}" hidden="{{!error}}" class="error-message">必选</view>
+</template>
+
+<template name="ben-btn-submit">
+  <button form-type="submit" class="ben-btn ben-btn-primary ben-btn-shadow" loading="{{state.disabled}}" disabled="{{state.disabled}}">{{text}}</button>
+</template>
+
+<template name="ben-btn-reset">
+  <button class="ben-btn ben-btn-primary ben-btn-shadow" data-keys="{{keys}}" bind:tap="_resetForm"
+    form-type="reset" loading="{{state.disabled}}" disabled="{{state.disabled}}">
+    {{text}}
+  </button>
+</template>
+

@@ -1,0 +1,2 @@
+<import src="/template/data-list.wxml" />
+<template is="load-more" data="{{...orderHistory, noMoreConfig}}"></template> 

@@ -1,0 +1,3 @@
+<import src="/template/data-list.wxml" />
+<template is="data-list" data="{{...orderHistory, noMoreConfig}}"></template>
+<!-- <template is="go-home"></template> -->

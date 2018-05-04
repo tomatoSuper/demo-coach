@@ -1,0 +1,20 @@
+.ben-form-con { box-sizing: border-box; padding: 0 20rpx;}
+.ben-form-group { background-color: #fff; line-height: 64rpx; margin: 10rpx 0; }
+.ben-form-group.chosen { justify-content: flex-start; min-height: 64rpx}
+.ben-form-group input { flex: 1; height: 64rpx; box-sizing: border-box; padding: 0 20rpx;}
+picker {margin: 10rpx 0;background-color: #fff; color: #666; line-height: 64rpx; height: 64rpx; box-sizing: border-box; padding: 0 20rpx;}
+.ben-form-group .ben-sub-btn { text-align: center; font-size: 24rpx; background-color: #1AAD19; color: #fff; border-radius: 0; }
+.ben-form-group .ben-sub-btn::after { border: 0 none; }
+.ben-form-group.local_code input { flex: 4 }
+.ben-form-group.local_code .ben-sub-btn { flex: 2; }
+.ben-form-group.access_code input { flex: 3 }
+.ben-form-group.access_code .ben-sub-btn { flex: 1; }
+.ben-form-group .chosen-item { padding: 0 20rpx; margin: 10rpx; color: #666; border: 1px solid #bdbdbd; }
+.ben-form-group .chosen-item.checked { border-color: #1AAD19; background-color: #1AAD19; color: #fff; }
+.error-message { font-size: 24rpx; color: #DD1F2A; }
+
+.ben-btn { font-size: 28rpx;line-height: 80rpx; border-radius: 0; text-align: center }
+.ben-btn::after { border: 0 none; }
+.ben-btn-primary,.ben-btn.ben-btn-primary.button-hover, .ben-btn.ben-btn-primary.ben-hover { color: #ffffff; background: linear-gradient(to right, #51CAE4, #1F82E3); }
+.ben-btn-shadow { box-shadow: 0 9px 15px rgba(31, 130, 227, 0.2); }
+.ben-btn { margin: 20rpx 0; }

@@ -1,0 +1,28 @@
+<view class="ben-calendar-con" bind:tap="_closeDatePicker">
+  <view class="flex-row-con ben-calendar-title ben-con">
+    <text>{{'<<'}}</text>
+    <text>{{'<'}}</text>
+    <text>{{current.year}} 年</text>
+    <text>{{current.month}} 月</text>
+    <text>{{'>'}}</text>
+    <text>{{'>>'}}</text>
+  </view>
+  <view class="ben-calendar-date">
+    <view class="ben-calendar-week flex-row-con">
+      <text wx:for="{{weekEnum}}" wx:key="{{index}}">{{item}}</text>
+    </view>
+    <view class="date-list flex-row-con">
+      <text wx:for="{{dateEnum}}" wx:key="{{index}}" class="ben-date {{item.isTody?'today':''}}" data-date="{{item}}" bind:tap="_checkDate">{{item.date}}</text>
+    </view>
+  </view>
+  <view class="ben-con">
+    <view class="ben-calendar-year flex-row-con">
+      <text wx:for="{{yearEnum}}" wx:key="{{index}}" data-index="{{index}}" bind:tap="_checkYear">{{item}}</text>
+    </view>
+  </view>
+  <view class="ben-con">
+    <view class="ben-calendar-month flex-row-con">
+      <text wx:for="{{monthEnum}}" wx:key="{{index}}" data-index="{{index}}" bind:tap="_checkMonth">{{item}}</text>
+    </view>
+  </view>
+</view>

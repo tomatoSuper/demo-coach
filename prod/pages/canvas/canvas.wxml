@@ -1,0 +1,4 @@
+<view class='ben-btn ben-btn-primary' bind:tap="saveShareCard">保存分享卡片</view>
+<import src="/template/share-card.wxml" />
+<template is="ben-share-card" data="{{canvas, shareCard}}"></template>
+<canvas class="demo-canvas" canvas-id="demo-canvas" style="width: {{canvas.width}}px; height: {{canvas.height}}px"></canvas>

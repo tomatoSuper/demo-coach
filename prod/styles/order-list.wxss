@@ -1,0 +1,31 @@
+.order-item {
+  margin: 16rpx 0;
+  border:1px solid #eee;
+   /* box-shadow: 1px 1px 4px #bbb;  */
+  background-color: #fff;
+}
+.order-item > view {
+  padding: 20rpx 32rpx;
+}
+.order-item .flex-row-con {
+  border-bottom: 1px solid #F5F5F5;
+  font-family: PingFangSC-Regular;
+  color: #999999;
+}
+.order-item .flex-row-con.price-con {
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  color: #333333;
+}
+/* .price-con > text {
+  margin-right: 60rpx;
+} */
+.data-label {
+  color:  #999999;
+}
+.points-val {
+  color: #48A956;
+}
+.points-val.minus {
+  color: #E3262F;
+}

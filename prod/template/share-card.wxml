@@ -1,0 +1,4 @@
+<template name="ben-share-card">
+  <image hidden lazy-load mode="widthFix" src="{{shareCard.logo}}"></image>
+  <canvas class="canvas-share-card" canvas-id="{{canvas.id}}" style="width: {{canvas.width}}px; height: {{canvas.height}}px"></canvas>
+</template>

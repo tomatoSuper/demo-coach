@@ -6,6 +6,7 @@ page {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .flex-col-con {
   display: flex;
@@ -16,3 +17,23 @@ page {
 .text-center { text-align: center; }
 .text-warning { color: #DD1F2A; }
 .text-disabled { color: #BDBDBD; }
+.no-more-data, .none-data {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  letter-spacing: 0;
+  padding: 68rpx 0;
+}
+
+.none-data {
+  line-height: 136rpx;
+  padding: 130rpx 0;
+}
+
+.none-data image {
+  display: block;
+  width: 176rpx;
+  height: 176rpx;
+  margin: 0 auto;
+}

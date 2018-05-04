@@ -1,0 +1,1 @@
+<navigator wx:for="{{router}}" wx:key="{{index}}" url="{{item.path}}">{{item.title}}</navigator>

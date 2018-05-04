@@ -1,0 +1,60 @@
+<template name="load-more">
+  <scroll-view class="data-list" style="{{styles}}" lower-threshold="100" scroll-y="{{!refresh}}" data-name="{{name}}" data-method="{{method}}" bind:scrolltolower="_onScrollBottom" bind:scrolltoupper="_onScrollTop" bindscroll="_scrolling" bind:touchstart="_touchStart"
+    capture-bind:touchmove="_touchMove">
+    <template is="my-refresh" data="{{state}}"></template>
+    <template is="{{name}}" data="{{list}}"></template>
+    <template is="my-loading" data="{{state}}"></template>
+    <template is="no-more-data" data="{{ list, state, noMoreConfig}}"></template>
+  </scroll-view>
+</template>
+
+<template name="data-list">
+  <view class="data-list" style="{{styles}}">
+    <template is="my-refresh" data="{{state}}"></template>
+    <template is="{{name}}" data="{{list}}"></template>
+    <template is="my-loading" data="{{state}}"></template>
+    <template is="no-more-data" data="{{ list, state, noMoreConfig}}"></template>
+  </view>
+</template>
+
+<template name="orderHistory">
+  <view class="order-item" wx:for="{{list}}" wx:key="{{index}}">
+    <view class="flex-row-con">
+      <view>日期：{{item.date}}</view>
+      <view>{{item.id}}</view>
+      <view>门店：{{item.storeName}}</view>
+    </view>
+    <view class="price-con flex-row-con">
+      <text><text class="data-label">金额：</text>{{item.amount}} 元</text>
+      <text class="points-val">{{item.points ? '+' + item.points + '分' : ''}}</text>
+    </view>
+  </view>
+</template>
+
+<template name="my-loading">
+  <!-- <view hidden="{{state.loading === false}}" class="loading-con">
+     <image mode="widthFix" src='/images/common/loading-grey.png'></image> 
+     <text>正在加载...</text> 
+  </view> -->
+  <view hidden="{{state.loading === false}}" class="loading-con">
+    <view class='loading'>L</view>
+  </view>
+</template>
+
+<template name="my-refresh">
+  <!-- <view hidden="{{state.refresh === false}}" class="loading-con">
+     <image mode="widthFix" src='/images/common/loading-grey.png'></image> 
+     <text>下拉刷新...</text> 
+  </view> -->
+  <view hidden="{{state.refresh === false}}" class="loading-con">
+    <view class='loading'>R</view>
+  </view>
+</template>
+
+<template name="no-more-data">
+  <view wx:if="{{list.length && state.isNoMore}}" class="no-more-data">{{noMoreConfig.noMore}}</view>
+  <view wx:if="{{state.isNoMore && !list.length && !state.loading}}" class="none-data">
+    <image wx:if="{{noMoreConfig.imageUrl}}" wx:key="{{Math.random()}}" mode="widthFix" src="{{noMoreConfig.imageUrl}}"></image>
+    <view>{{noMoreConfig.none}}</view>
+  </view>
+</template>

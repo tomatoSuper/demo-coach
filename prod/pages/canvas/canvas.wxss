@@ -1,0 +1,9 @@
+ image {
+  width: 100%;
+  vertical-align: middle;
+} 
+.canvas-share-card {
+  position: absolute;
+  left: -300%;
+  z-index: -999;
+}  

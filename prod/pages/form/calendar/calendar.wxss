@@ -1,0 +1,13 @@
+.ben-con { padding: 0 30rpx; }
+.ben-calendar-con {  }
+.ben-calendar-title { line-height: 8vh;font-size: 36rpx; }
+.ben-calendar-title text { padding: 0 20rpx; }
+.ben-calendar-week text { flex: 1; text-align: center; font-size: 32rpx; line-height: 6vh;}
+.ben-calendar-month,.ben-calendar-year { margin: 1vh 0; height: 80vh; }
+.ben-calendar-date .date-list { margin: 1vh 0; height: 78vh; justify-content: flex-start;}
+.ben-calendar-month text,.ben-calendar-year text {width: 33.33%; flex-wrap: nowrap; line-height: 20vh;font-size: 40rpx;text-align: center; }
+.ben-calendar-month {border-top: 1px solid #666; border-left: 1px solid #666;}
+.ben-calendar-year { border: 1px solid #666; }
+.ben-calendar-month text {box-sizing: border-box; border-right: 1px solid #666; border-bottom: 1px solid #666;}
+.ben-calendar-date .date-list text { width: 14.2857%; line-height: 13vh;text-align: center; }
+.ben-date.today { background-color: #1AAD19; color: #fff; }

@@ -1,0 +1,15 @@
+<import src="/template/ben-form.wxml" />
+<view class="ben-form-con">
+  <form bind:submit="_formSubmit" report-submit>
+    <template is="ben-input-group" data="{{...local_code}}"></template>
+    <template is="ben-input-group" data="{{...access_code}}"></template>
+    <template is="ben-input-group" data="{{...address}}"></template>
+    <template is="ben-picker-group" data="{{...city}}"></template>
+    <template is="ben-mutiPicker-group" data="{{...zone}}"></template>
+    <template is="ben-chosen-group" data="{{...status}}"></template>
+    <template is="ben-chosen-group" data="{{...eventType}}"></template>
+    <input hidden name="cityName" value="{{city.index>0? city.list[city.index][city.keyMap.text] : ''}}"></input> 
+    <template is="ben-btn-submit" data="{{...submit}}"></template>
+    <template is="ben-btn-reset" data="{{...reset}}"></template>
+  </form>
+</view>

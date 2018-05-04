@@ -6,6 +6,7 @@
 </view>
 <navigator class="nav-item" url="{{TeeinPath}}">我要去Teein主页</navigator>
 <navigator class="nav-item" url="/BZ/pages/plp/plp">我要去 商品列表 页面</navigator>
+<button class="nav-item" open-type="contact">打开电商客服</button>
 <ben-modal open title="标题">
   <view class="text-center">Welcome to BZ_Store !!!</view>
 </ben-modal>
